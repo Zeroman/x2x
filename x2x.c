@@ -2089,7 +2089,7 @@ XKeyEvent *pEv;
   Bool      DoFakeShift = False;
   KeyCode   toShiftCode;
 
-  keysym = XkbKeycodeToKeysym(pDpyInfo->fromDpy, pEv->keycode, 0, 0);
+  keysym = XkbKeycodeToKeysym(pDpyInfo->toDpy, pEv->keycode, 0, 0);
   bPress = (pEv->type == KeyPress);
 
 #ifdef DEBUG
